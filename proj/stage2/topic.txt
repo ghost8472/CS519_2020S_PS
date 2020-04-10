@@ -1,0 +1,9 @@
+Topic: Outcome Prediction for Shelter Animals
+
+Source: https://www.kaggle.com/c/shelter-animal-outcomes/overview/description
+
+Succinctly stated, Animal rights advocates from the Austin Animal Center and the
+ASPCA have put together data for shelter animals. It is the desire of these
+organizations, and our goal, to use this data to try and accurately predict the
+likely outcomes for animals when they leave the shelter.
+

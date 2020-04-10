@@ -1,0 +1,21 @@
+
+Topic: Outcome Prediction for Shelter Animals
+
+Source: https://www.kaggle.com/c/shelter-animal-outcomes/overview/description
+
+Problem:
+	Succinctly stated, Animal rights advocates from the Austin Animal Center and the ASPCA have put together data for shelter 
+animals, including various pheno traits and whether or not they were adopted. It is the desire of these organizations, and our 
+goal, to use this data to try and accurately predict the likely outcomes for animals when they leave the shelter. If the outcome 
+for a particular animal can be predicted, then more effort can be put into finding homes for those less likely to be adopted. 
+
+Solution:
+
+	Machine Learning can be implemented to determine if a shelter animal has a high chance of being adopted or not. This will 
+require a high amount of data preprocessing, as the initial data is highly categorical. Fortunately it's also distict without too 
+many levels, so a labler can be used to get numerical values for use. The key traits that will be used for training will be 
+AnimalType, AgeuponOutcome, SexuponOutcome, and OutcomeType. OutcomeType will be the training target. 
+
+	Since this outcome relies on so many traits, a simple classifier will likely not give good results. Thus the group will use 
+ensemble methods for predictions, though the inclusion of a more basic learner such as a support vector machine may be worth trying
+simply for comparison.  
