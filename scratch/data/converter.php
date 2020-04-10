@@ -59,6 +59,9 @@ $splits["Color-Mix"] = [];
 for($i = 1; $i <= 12; $i++) {
 	$splits["DateTime-Month{$i}"] = [];
 }
+for ($i = 1; $i <= 7; $i++) {
+	$splits["DateTime-DOW{$i}"] = [];
+}
 $splits["DateTime-Morning"] = [];
 $splits["DateTime-Afternoon"] = [];
 $splits["DateTime-Night"] = [];
@@ -90,6 +93,7 @@ foreach ($keyed as $i=>&$row) { foreach($row as $col=>$val) {
 		$exh = explode(":",$ex[1]);  $hour = intval($exh[0]);
 		$exm = explode("-",$ex[0]);  $mon  = intval($exm[1]);
 		$row[$col.'-Month'.$mon] = 1;
+		$row[$col.'-DOW'.date('N')] = 1;
 		if ($hour >= 7 && $hour < 12) {
 			$row[$col.'-Morning'] = 1;
 		} else if ($hour >= 12 && $hour <= 19) {
