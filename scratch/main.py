@@ -1,5 +1,5 @@
 #!/bin/python3
-#written using Python 3.8.1, by William Baker, February-March 2020, for NMSU's  CS-519 course
+#written using Python 3.8.1, February-May 2020, for NMSU's  CS-519 course
 
 import argparse
 import pandas as pd
