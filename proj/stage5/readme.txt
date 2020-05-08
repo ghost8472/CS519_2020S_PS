@@ -19,13 +19,35 @@ data.
 
 Sample commands
 ```
-    python main.py -f test.csv
-    python main.py -f ../../test.csv -e 20
-    python main.py -f ./test.csv -b 50 -s 1000
+    python main.py perceptron data\train_conversion_lowfeat_sansheader.csv
+    python main.py perceptron data\train_conversion_extfeat_sansheader.csv
+
+    python nn.py -f data\train_conversion_extfeat_withheader.csv
+    python nn.py -f data\train_conversion_extfeat_withheader.csv -e 20
 ```
 
 %sh> python main.py -h
-usage: main.py [-h] -f CSV [-b BATCH] [-s SIZE] [-e EPOCH]
+usage: main.py [-h] [--builtin] [--fetch] [--nosplit] [--maxrows MAXROWS] [--splitseed SPLITSEED] [--splitsize SPLITSIZE] [--nostandard]
+               [--reduce {none,pca,lda,kpca}] [--redcomps REDCOMPS] [--kpca_kernel {linear,poly,rbf,sigmoid,cosine}] [--randseed RANDSEED]
+               [--eta ETA] [--iter ITER] [--C C] [--kernel {linear,rbf,poly,sigmoid}] [--criterion {gini,entropy}] [--maxdepth MAXDEPTH]
+               [--neighbors NEIGHBORS] [--knnmetric {minkowski}] [--knnmetricp {1,2}] [--n_est N_EST] [--n_jobs N_JOBS]
+               [--min_samples_split MIN_SAMPLES_SPLIT] [--min_samples_leaf MIN_SAMPLES_LEAF] [--bootstrap] [--max_features MAX_FEATURES]
+               [--max_samples MAX_SAMPLES]
+               {perceptron,svm,dtree,knn,randforest,adaboost,bagging} datafile
+
+positional arguments:
+  {perceptron,svm,dtree,knn,randforest,adaboost,bagging}
+  datafile              file containing the data, in CSV format (last column is class)
+
+optional arguments:
+  -h, --help            show this help message and exit
+[...omitted for brevity...]
+
+
+
+
+%sh> python nn.py -h
+usage: nn.py [-h] -f CSV [-b BATCH] [-s SIZE] [-e EPOCH]
 
 optional arguments:
   -h, --help  show this help message and exit
